@@ -1,0 +1,14 @@
+{
+  "name": "arr.js-testing",
+  "version": "1.0.0",
+  "description": "Unit testing code for arr.js",
+  "main": "arr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ian Cramer",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
+}
