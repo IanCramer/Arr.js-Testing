@@ -1,9 +1,24 @@
+/*
+// ES6 imports
 import { compare } from 'src/utils/string';
 import { walk } from './obj';
 import { isNotDefined } from 'src/utils/var';
+*/
+
+// ES5 Imports
+const stringF = require('./string');
+const compare = stringF.compare;
+
+const objF = require('./obj');
+const walk = objF.walk;
+
+const varF = require('./var');
+const isNotDefined = varF.isNotDefined;
+
+
 
 // Returns true if two given arrays have the same set of values.
-export const shallowCompare = (arr1, arr2) => {
+/*export*/ const shallowCompare = (arr1, arr2) => {
   arr1 = arr1 || [];
   arr2 = arr2 || [];
   const { length: len1 } = arr1;
@@ -14,13 +29,13 @@ export const shallowCompare = (arr1, arr2) => {
 
 // Returns the first item in a given array that matches a given property
 // name & value. If not found, returns null;
-export const findBy = (arr, propName, propValue) => (
+/*export*/ const findBy = (arr, propName, propValue) => (
   (arr || []).find(item => (item && item[propName]) === propValue)
 );
 
 // Returns the index of the first item in a given array that matches a given property
 // name & value. If not found, returns -1.
-export const indexOfBy = (arr, propName, propValue) => {
+/*export*/ const indexOfBy = (arr, propName, propValue) => {
   arr = arr || [];
   const { length } = arr;
   for (let i = 0; i < length; i++) {
@@ -34,19 +49,19 @@ export const indexOfBy = (arr, propName, propValue) => {
 
 // Returns all items in a given array that do match a given property
 // name & value.
-export const filterBy = (arr, propName, propValue) => (
+/*export*/ const filterBy = (arr, propName, propValue) => (
   (arr || []).filter(item => (item && item[propName]) === propValue)
 );
 
 // Returns all items in a given array that do not match a given property
 // name & value.
-export const rejectBy = (arr, propName, propValue) => (
+/*export*/ const rejectBy = (arr, propName, propValue) => (
   (arr || []).filter(item => (item && item[propName]) !== propValue)
 );
 
 // Returns a clone of a given array in which the items at 2 given indices
 // have been swapped.
-export const swapItems = (arr, index1, index2) => {
+/*export*/ const swapItems = (arr, index1, index2) => {
   if (!arr) {
     return arr;
   }
@@ -59,13 +74,13 @@ export const swapItems = (arr, index1, index2) => {
 };
 
 // Flattens an array of arrays into an array.
-export const flatten = arr => (arr || []).reduce((out, item) => {
+/*export*/ const flatten = arr => (arr || []).reduce((out, item) => {
   out = out.concat(item);
   return out;
 }, []);
 
 // Sorts a copy of a given object array by the values at a given property path.
-export const sortBy = (arr, propName, desc = false) => {
+/*export*/ const sortBy = (arr, propName, desc = false) => {
   const clone = arr ? [].concat(arr) : [];
   clone.sort((a, b) => (
     compare(walk(a, propName), walk(b, propName))
@@ -79,7 +94,7 @@ export const sortBy = (arr, propName, desc = false) => {
 // Returns an array of pairs, where each pair is an array of two different
 // members from the given array.  All possible pairs are included.  The pairs
 // [a,b] and [b,a] are considered distinct, so both are included.
-export const permutations = arr => {
+/*export*/ const permutations = arr => {
   arr = arr || [];
   const out = [];
   arr.forEach(a => {
@@ -94,7 +109,7 @@ export const permutations = arr => {
 
 // Returns a hash of slices of the given array, where each hash key is the
 // value of the given prop for every array item in that slice.
-export const splitBy = (arr, propName) => {
+/*export*/ const splitBy = (arr, propName) => {
   arr = arr || [];
   const out = {};
   arr.forEach(a => {
@@ -110,7 +125,7 @@ export const splitBy = (arr, propName) => {
 // Returns a hash of slices of the given array, where each hash key is the
 // return value of the given function for every array item in that slice.
 // Similar to `splitBy` except takes a function instead of a property name.
-export const splitByFn = (arr, fn) => {
+/*export*/ const splitByFn = (arr, fn) => {
   arr = arr || [];
   const out = {};
   arr.forEach(a => {
@@ -126,7 +141,7 @@ export const splitByFn = (arr, fn) => {
 // Given an array of non-objects (i.e. booleans, numbers, strings), returns
 // a copy of the array in which duplicates have been removed.
 // Warning: not optimized; best used on short arrays.
-export const unique = arr => {
+/*export*/ const unique = arr => {
   if (!arr || !arr.length) {
     return arr;
   }
@@ -140,5 +155,23 @@ export const unique = arr => {
 };
 
 // Given an array, returns the subset of array items which are not null/undefined.
-export const compact = arr => (arr || [])
+/*export*/ const compact = arr => (arr || [])
   .filter(item => !isNotDefined(item));
+
+
+
+module.exports = {
+  shallowCompare: function(a,b) {return shallowCompare(a,b); },
+  findBy: function(a,b,c) { return findBy(a,b,c); },
+  indexOfBy: function(a,b,c) { return indexOfBy(a,b,c); },
+  filterBy: function(a,b,c) { return filterBy(a,b,c); },
+  rejectBy: function(a,b,c) { return rejectBy(a,b,c); },
+  swapItems: function(a,b,c) { return swapItems(a,b,c); },
+  flatten: function(x) { return flatten(x); },
+  sortBy: function(a,b,c = false) { return sortBy(a,b,c); },
+  permutations: function(x) { return permutations(x); },
+  splitBy: function(a,b) { return splitBy(a,b); },
+  splitByFn: function(a,b) { return splitByFn(a,b); },
+  unique: function(x) { return unique(x); },
+  compact: function(x) { return compact(x); }
+}
