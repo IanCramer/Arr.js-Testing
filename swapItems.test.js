@@ -102,7 +102,7 @@ describe('swapItems Function Testing', () =>
 // The bottom line has the highest information provided to lines printed ratio.
 		// console.log(errs);
 		// console.log(Object.keys(errs));
-		new Set(Object.values(errs)).forEach(x => console.log(x));
+		// new Set(Object.values(errs)).forEach(x => console.log(x));
 	});
 
 	describe('good array, bad swap indices', () =>
