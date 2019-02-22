@@ -115,10 +115,10 @@ describe('sortBy function tests', () =>
 			this.p3 = p3;
 		}
 
-		var obj1 = Obj(true, 3, 'b string');
-		var obj2 = Obj(true, 2, 'd string');
-		var obj3 = Obj(false, 1, 'c string');
-		var obj4 = Obj(false, 4, 'a string');
+		var obj1 = new Obj(true, 3, 'b string');
+		var obj2 = new Obj(true, 2, 'd string');
+		var obj3 = new Obj(false, 1, 'c string');
+		var obj4 = new Obj(false, 4, 'a string');
 
 		var objects = [obj1, obj2, obj3, obj4];
 

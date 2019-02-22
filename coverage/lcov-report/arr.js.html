@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">27.45% </span>
+        <span class="strong">28.43% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>28/102</span>
+        <span class='fraction'>29/102</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">7.41% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>4/54</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">10.53% </span>
+        <span class="strong">7.89% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/38</span>
+        <span class='fraction'>3/38</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">29.17% </span>
+        <span class="strong">30.21% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>28/96</span>
+        <span class='fraction'>29/96</span>
       </div>
     </div>
     <p class="quiet">
@@ -319,16 +319,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">192x</span>
+<span class="cline-any cline-yes">192x</span>
+<span class="cline-any cline-yes">192x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">98x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -352,22 +368,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -393,8 +393,8 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">192x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -494,32 +494,32 @@ const isNotDefined = varF.isNotDefined;
 // Returns an array of pairs, where each pair is an array of two different
 // members from the given array.  All possible pairs are included.  The pairs
 // [a,b] and [b,a] are considered distinct, so both are included.
-/*export*/ const permutations = arr =&gt; {
-  arr = arr || [];
-  const out = [];
-  arr.forEach(a =&gt; {
-    arr.forEach(b =&gt; {
-      if (a !== b) {
-        out.push([ a, b ]);
+/*export*/ const permutations = <span class="fstat-no" title="function not covered" >ar</span>r =&gt; {
+<span class="cstat-no" title="statement not covered" >  arr = arr || [];</span>
+  const out = <span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >  arr.forEach(<span class="fstat-no" title="function not covered" >a </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    arr.forEach(<span class="fstat-no" title="function not covered" >b </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (a !== b) {</span>
+<span class="cstat-no" title="statement not covered" >        out.push([ a, b ]);</span>
       }
     });
   });
-  return out;
+<span class="cstat-no" title="statement not covered" >  return out;</span>
 };
 &nbsp;
 // Returns a hash of slices of the given array, where each hash key is the
 // value of the given prop for every array item in that slice.
-/*export*/ const splitBy = <span class="fstat-no" title="function not covered" >(a</span>rr, propName) =&gt; {
-<span class="cstat-no" title="statement not covered" >  arr = arr || [];</span>
-  const out = <span class="cstat-no" title="statement not covered" >{};</span>
-<span class="cstat-no" title="statement not covered" >  arr.forEach(<span class="fstat-no" title="function not covered" >a </span>=&gt; {</span>
-    const propValue = <span class="cstat-no" title="statement not covered" >walk(a, propName);</span>
-<span class="cstat-no" title="statement not covered" >    if (!out[propValue]) {</span>
-<span class="cstat-no" title="statement not covered" >      out[propValue] = [];</span>
+/*export*/ const splitBy = (arr, propName) =&gt; {
+  arr = arr || [];
+  const out = {};
+  arr.forEach(a =&gt; {
+    const propValue = walk(a, propName);
+    if (!out[propValue]) {
+      out[propValue] = [];
     }
-<span class="cstat-no" title="statement not covered" >    out[propValue].push(a);</span>
+    out[propValue].push(a);
   });
-<span class="cstat-no" title="statement not covered" >  return out;</span>
+  return out;
 };
 &nbsp;
 // Returns a hash of slices of the given array, where each hash key is the
@@ -569,8 +569,8 @@ module.exports = {
   swapItems: <span class="fstat-no" title="function not covered" >fu</span>nction(a,b,c) { <span class="cstat-no" title="statement not covered" >return swapItems(a,b,c); </span>},
   flatten: <span class="fstat-no" title="function not covered" >fu</span>nction(x) { <span class="cstat-no" title="statement not covered" >return flatten(x); </span>},
   sortBy: <span class="fstat-no" title="function not covered" >fu</span>nction(a,b,c = <span class="branch-0 cbranch-no" title="branch not covered" >false)</span> { <span class="cstat-no" title="statement not covered" >return sortBy(a,b,c); </span>},
-  permutations: function(x) { return permutations(x); },
-  splitBy: <span class="fstat-no" title="function not covered" >fu</span>nction(a,b) { <span class="cstat-no" title="statement not covered" >return splitBy(a,b); </span>},
+  permutations: <span class="fstat-no" title="function not covered" >fu</span>nction(x) { <span class="cstat-no" title="statement not covered" >return permutations(x); </span>},
+  splitBy: function(a,b) { return splitBy(a,b); },
   splitByFn: <span class="fstat-no" title="function not covered" >fu</span>nction(a,b) { <span class="cstat-no" title="statement not covered" >return splitByFn(a,b); </span>},
   unique: <span class="fstat-no" title="function not covered" >fu</span>nction(x) { <span class="cstat-no" title="statement not covered" >return unique(x); </span>},
   compact: <span class="fstat-no" title="function not covered" >fu</span>nction(x) { <span class="cstat-no" title="statement not covered" >return compact(x); </span>}
@@ -580,7 +580,7 @@ module.exports = {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Feb 22 2019 11:56:47 GMT-0800 (Pacific Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Feb 22 2019 14:29:05 GMT-0800 (Pacific Standard Time)
 </div>
 </div>
 <script src="prettify.js"></script>
